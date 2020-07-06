@@ -41,11 +41,19 @@ For Maven: https://www.youtube.com/watch?v=pt3uB0sd5kY https://maven.apache.org/
 
 For JSON: https://www.youtube.com/watch?v=iiADhChRriM
 
-Adding few more links ( for core Java only): https://www.youtube.com/watch?v=pTAda7qU4LY&list=PL59LTecnGM1Mg6I4i_KbS0w5bPcDjl7oz&index=9 https://www.youtube.com/watch?v=70qy6_gw1Hc&list=PL59LTecnGM1Mg6I4i_KbS0w5bPcDjl7oz&index=13 https://www.youtube.com/watch?v=6q98thyEX4Q&list=PLonJJ3BVjZW6_q8gh7XoLUIhRIyBcYJLP https://www.youtube.com/watch?v=7GwptabrYyk
+# Adding few more links ( for core Java only): 
+
+https://www.youtube.com/watch?v=pTAda7qU4LY&list=PL59LTecnGM1Mg6I4i_KbS0w5bPcDjl7oz&index=9
+
+https://www.youtube.com/watch?v=70qy6_gw1Hc&list=PL59LTecnGM1Mg6I4i_KbS0w5bPcDjl7oz&index=13 
+
+https://www.youtube.com/watch?v=6q98thyEX4Q&list=PLonJJ3BVjZW6_q8gh7XoLUIhRIyBcYJLP
+
+https://www.youtube.com/watch?v=7GwptabrYyk
 
 =============================================== 
 
-# The useful links
+# Other useful links
 
 https://api.github.com/search/users?q=shashi
 
