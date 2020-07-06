@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Here you define the version of xml that you are using, and also the encoding-->
+<!--Since it is a xml file so it will have a tree like structure, like this-->
+<!--<parent_tag>-->
+<!--	<child1_tag> -->
+<!--	</child1_tag> -->
+<!--				  -->
+<!--	<child2_tag> -->
+<!--    </child2_tag> -->
+<!--</parent_tag>-->
+
+<!--This maven.apache.org is the url of the central repository, you must have this in your pom.xml otherwise-->
+<!--		maven will not be able to download the dependencies from the central respository -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+<!--	All the tags like dependencies, plugins, parent, group id and all the other stuff you have-->
+<!--	write under the project tag, bcoz that only define the project structure-->
+
+<!--	Parent tag is needed to inherit the dependencies and plugins of spring-boot-starter-parent pom, so-->
+<!--	that you dont to define it again in your this pom (simple inheritence)-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+<!--	This group id and artifact id are your org name and project name-->
+<!--	On the basis of these your package in src/main/java will be initialized-->
+<!--	like in this project you can see, it is named as com.example.springbasics.demospring-->
+<!--	which is basically the combination of group id and artifact id-->
+	<groupId>com.example.spring-basics</groupId>
+	<artifactId>demo-spring</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo-spring</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<my_jetty.version>2.3.1.RELEASE</my_jetty.version>
+	</properties>
+
+<!--	Dependencies are the basic libraries that you want to implort in your project-->
+<!--	so that you can some pre built functionality like web dependencies allows to write REST APIs-->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+<!--			Exclusion basically list the parent dependency that you want to remove/exclude-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+<!--		This dependency is for having your code run on jetty server and not the default tomcat server-->
+<!--		Make sure to uncomment this if you want to use-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-jetty</artifactId>-->
+<!--			<version>${my_jetty.version}</version>-->
+<!--		</dependency>-->
+
+<!--		This dependency is for using undertow server. Make sure to uncomment this if you want to use-->
+<!--		Also please note that you can use only server at time, so uncomment either jetty or undertow-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-undertow</artifactId>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+<!--		This directory tag is used to specify the location of the folder for your .jar and other maven generated class-->
+<!--		Make sure to uncomment this if you want to define a new folder instead of target -->
+<!--		<directory>my_target</directory>-->
+	</build>
+
+</project>
