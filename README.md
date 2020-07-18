@@ -61,6 +61,41 @@ https://developer.github.com/v3/
 
 https://start.spring.io/
 
+# Lecture 5 Links:
+
+Heroku
+
+https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
+
+https://www.youtube.com/watch?v=KDK5xXPJVIg
+
+https://www.callicoder.com/deploy-host-spring-boot-apps-on-heroku/
+
+
+AWS
+
+https://www.youtube.com/watch?v=IT1X42D1KeA
+
+https://www.youtube.com/watch?v=6RrqytT0-I8
+
+ngrok
+
+https://ngrok.com/download
+
+Swagger
+
+https://www.youtube.com/watch?v=gduKpLW_vdY
+
+
+Basics of Spring Boot
+
+https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
+
+RestTemplate & Microservices
+
+https://www.youtube.com/watch?v=y8IQb4ofjDo&list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas
+
+
 ============================= Useful YouTube Playlists:
 
 https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
