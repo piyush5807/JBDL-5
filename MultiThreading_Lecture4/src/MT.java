@@ -2,10 +2,13 @@ public class MT {
 
     public static void main(String[] args) throws InterruptedException {
 
+        long start = System.currentTimeMillis();
         MyThread obj1 = new MyThread();
 //        obj1.setDaemon(true);
         obj1.start();
-//        Thread.sleep(80);
+
+        obj1.join();
+        System.out.println(System.currentTimeMillis() - start);
         System.out.println("I am in thread " + Thread.currentThread().getName());
     }
 //
@@ -14,9 +17,13 @@ public class MT {
         @Override
         public void run() {
             System.out.println("I am in thread " + currentThread().getName());
-//                  Thread.sleep(50);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-                // heavy computation
+            // heavy computation
 
                 System.out.println("Let's check whether this gets printed or not");
 
