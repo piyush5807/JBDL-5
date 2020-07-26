@@ -1,9 +1,10 @@
 package org.geeksforgeeks.jbdl.jbdl5springbeans;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-@Service
+@Component
+@Scope("prototype")
 public class User{
 
     private int age;
@@ -33,11 +34,11 @@ public class User{
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "User{" +
+//                "age=" + age +
+//                ", name='" + name + '\'' +
+//                '}';
+//    }
 }

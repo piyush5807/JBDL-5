@@ -1,36 +1,45 @@
 package org.geeksforgeeks.jbdl.jbdl5springbeans;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+import javax.jws.soap.SOAPBinding;
+import java.util.List;
+
+@RestController
 public class UserController {
 
-    int count;
+//    @Autowired
+//    private User my_user;
 
-    public UserController(int count) {
-        this.count = count;
-    }
+    @Autowired
+    MyConfig my_config;
 
-    public UserController(){
-    }
+    @Autowired
+    UserService service;
 
     @GetMapping("/users")
-    @ResponseBody
     public User getUser(){
-        return new User(21, "XYZ");
+        User my_user = my_config.getUser();
+        my_user.setAge(20);
+        my_user.setName("ABC");
+        System.out.println(my_user);
+        return my_user;
     }
 
-    @GetMapping("/users2")
-
-    public User getUser2(){
-        return new User(20, "ABC");
-    }
+//    @GetMapping("/users2")
+//
+//    public User getUser2(){
+//        return new User(20, "ABC");
+//    }
 
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public void getUserPost(@RequestBody User user){
-        System.out.println(user);
+    public void getUserPost(@RequestBody List<User> users){
+        System.out.println(users);
+
+        service.insert(users);
     }
 }
 
