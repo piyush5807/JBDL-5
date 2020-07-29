@@ -1,0 +1,139 @@
+Beans and Annotations
+
+Ques 1 What is a bean and why do we need it ?
+
+Ans. The objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. These beans are created with the configuration metadata that you supply to the container. 
+
+Now what is an IOC container and other stuff you can read it from here, although i have already covered this in class -> https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction
+
+Ques 2 How can define a bean ?
+
+And. There are multiple ways to define, either using xml files or by using annotations. Annotations i have already shown you, how you can create using xml, its easy you can look from here -> https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html
+
+
+Ques 3 What is a bean scope ?
+Ans. It is super duper important, I have already explained in the class, make sure you understand this properly -> https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html
+
+
+Ques 4 How does Spring IOC container picks up beans defined by you ?
+Ans. It picks up all the annotations defined with @component annotations during component scan
+
+Ques 5 Now what is a component scan ?
+Ans. Component scan is basically a technique to tell the Spring IOC to search for our own defined beans (which we defined using annotations or xml based schema) and then instantiate these, so that we don't have to manager these objects/components
+
+Read this article for more clarity -> https://dzone.com/articles/spring-component-scan
+
+
+Ques 6 How you can define your own custom bean without the use of @Component annotation ?
+Ans. You just have to annotate @Bean over a function which you can create in a config class, i have already shown you that in the class.
+
+For more clarity refer this article -> https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html
+
+
+Some useful annotations that you should be aware about
+
+<----------------------------------------------------- Bean and Spring IOC Related Annotations   ---------------------------------------------------------------->
+
+@Configuration: Used to indicate that a class declares one or more @Bean methods. These classes are processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+
+@Bean: Indicates that a method produces a bean to be managed by the Spring container. This is one of the most used and important spring annotation. @Bean annotation also can be used with parameters like name, initMethod and destroyMethod.
+
+(
+	name – allows you give name for bean
+	initMethod – allows you to choose method which will be invoked on context register
+	destroyMet
+)
+
+@Autowired - marks a constructor, field, or setter method to be autowired by Spring dependency injection.
+
+@EnableWebSecurity: It is used for defining Spring Security configuration
+
+
+
+
+<-------------------------------------------------      Component Related Annotations       ---------------------------------------------------------------------->
+
+@ComponentScan: Configures component scanning directives for use with @Configuration classes. Here we can specify the base packages to scan for spring components.
+
+@Component: Indicates that an annotated class is a “component”. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.
+
+@SpringBootApplication : It is used to mark the main class of a Spring Boot application. It encapsulates @Configuration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
+
+@Service: Indicates that an annotated class is a “Service”. This annotation serves as a specialization of @Component, allowing for implementation classes to be autodetected through classpath scanning.
+
+@Repository: Indicates that an annotated class is a “Repository”. This annotation serves as a specialization of @Component and advisable to use with DAO classes.
+
+@Controller - marks the class as web controller, capable of handling the requests.
+
+@RestController: It can be considered as a combination of @Controller and @ResponseBody annotations. The @RestController annotation is itself annotated with the @ResponseBody annotation. It eliminates the need for annotating each method with @ResponseBody.
+
+
+<-------------------------------------------------------------   Request Repsone Related Annotations    ----------------------------------------------------------->
+
+@RequestMapping - maps HTTP request with a path to a controller method.
+
+@GetMapping: It maps the HTTP GET requests on the specific handler method. It is used to create a web service endpoint that fetches It is used instead of using: @RequestMapping(method = RequestMethod.GET)
+
+@PostMapping: It maps the HTTP POST requests on the specific handler method. It is used to create a web service endpoint that creates It is used instead of using: @RequestMapping(method = RequestMethod.POST)
+
+@PutMapping: It maps the HTTP PUT requests on the specific handler method. It is used to create a web service endpoint that creates or updates It is used instead of using: @RequestMapping(method = RequestMethod.PUT)
+
+@DeleteMapping: It maps the HTTP DELETE requests on the specific handler method. It is used to create a web service endpoint that deletes a resource. It is used instead of using: @RequestMapping(method = RequestMethod.DELETE)
+
+@PatchMapping: It maps the HTTP PATCH requests on the specific handler method. It is used instead of using: @RequestMapping(method = RequestMethod.PATCH)
+
+@RequestBody: It is used to bind HTTP request with an object in a method parameter. Internally it uses HTTP MessageConverters to convert the body of the request. When we annotate a method parameter with @RequestBody, the Spring framework binds the incoming HTTP request body to that parameter.
+
+@ResponseBody: It binds the method return value to the response body. It tells the Spring Boot Framework to serialize a return an object into JSON and XML format.
+
+@PathVariable: It is used to extract the values from the URI. It is most suitable for the RESTful web service, where the URL contains a path variable. We can define multiple @PathVariable in a method.
+
+@RequestParam: It is used to extract the query parameters form the URL. It is also known as a query parameter. It is most suitable for web applications. It can specify default values if the query parameter is not present in the URL.
+
+@RequestHeader: It is used to get the details about the HTTP request headers. We use this annotation as a method parameter. The optional elements of the annotation are name, required, value, defaultValue. For each detail in the header, we should specify separate annotations. We can use it multiple time in a method
+
+@RequestAttribute: It binds a method parameter to request attribute. It provides convenient access to the request attributes from a controller method. With the help of @RequestAttribute annotation, we can access objects that are populated on the server-side.
+
+
+<--------------------------------------------------------      JPA related Annotations         --------------------------------------------------------------->
+
+
+@Entity: It specifies that the class is an entity and is mapped to a database table. 
+
+@Id : marks a field in a model class as the primary key
+
+@Param: It is used to pass named parameters to our queries
+
+Ex - @Query("FROM Person p WHERE p.name = :name")
+Person findByName(@Param("name") String name);
+
+@Query: Used to provide queries either using JPQL or using native SQL
+
+@Table : It specifies the table in the database with which this entity is mapped. 
+
+@Column : Specify the column mapping using @Column annotation. Name attribute of this annotation is used for specifying the table’s column name.
+
+@GeneratedValue: This annotation specifies the generation strategies for the values of primary keys
+
+@OrderBy: Sort your data using @OrderBy annotation.
+
+Ex - >  @OrderBy("id asc")
+private Set employee_address;
+
+@JoinColumn: This annotation is used for one-to-one or many-to-one associations when foreign key is held by one of the entities.
+
+@ForeignKey: This annotation is used to specify the associated foreign key of a @JoinColumn mapping. This is only used if the automated schema generation tool is enabled. In which case, it allows you to customize the underlying foreign key definition.
+
+@Index: This annotation is used by the automated schema generation tool to create a database index.
+
+@JoinTable: This annotation is used to specify the link table between two other database tables.
+
+
+
+<-----------------------------------------------------       Mongo related Annotations           --------------------------------------------------------------> 
+
+@Id : A field annotated with @Id (org.springframework.data.annotation.Id) will be mapped to the '_id' field in the mongodb database.
+
+@Document: This annotation marks a class as being a domain object that we want to persist to the database
+
+@Field: we can configure the name of a field we want to use when MongoDB persists the document
