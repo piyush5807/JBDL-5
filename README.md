@@ -1,5 +1,6 @@
 # JBDL-5
 
+# Docker Slides -> https://docs.google.com/presentation/d/1w4UCwwvQJw9vQe1ssCUPP55TblGOl3WhWrS1Q30kODw/edit?usp=sharing
 
 # Agenda for the next week (2nd Week):
 Intro to Spring / Spring Boot
