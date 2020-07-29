@@ -1,0 +1,46 @@
+Spring Security
+
+It is a functionality provided by spring boot which makes it easier to incorporate security in the applications you build. Also it provides multiple types of securities that you can have in your app like jdbcAuthentication, inMemoryAuthentication, ldapBasedAuthentication, authentication using userDetailsService, oauth ect. (The last 2 are the important ones, rest all are not used mostly)
+
+So basically there 2 important terms that you need to be aware of when talking about the security (and infact its true with most of languages you build your projects in, its not only with spring)
+
+1. Authentication : Authentication is basically checking that if the entity making the request is a valid one or not, if its not a valid user/entity the server will throw 401 HTTP status code error, although it means unauthorized but don't confuse it with authorization (its totally different from that). There are various types of authentication like :
+
+-> user id and password
+-> token based
+-> otp or some captcha type
+
+
+2. Authorization : Authorization basically means whether the user/entity making request is allowed to do that operation, it is know that its a valid user/entity but still it may not have proper access control
+				   or permissions to that operation. The HTTP status error code that is retuned is 403 which means forbidden access 
+
+
+
+
+Some important points to note here :
+-> Authorization always happens after authentication (it is logical, think about it bcoz it doesn't makes sense also to check the authorization for a user who is not even valid user)
+
+-> There is a concept of filter chain in spring security which have some specific order of filters
+
+-> Some concepts related to filters:
+
+1. How to find the registered filters -> https://www.baeldung.com/spring-security-registered-filters
+2. How you can define your custom filter -> https://www.baeldung.com/spring-security-custom-filter
+3. How this filter chain works -> https://stackoverflow.com/questions/41480102/how-spring-security-filter-chain-works
+
+
+#Note : Read the below article only if you understood the above 3 bcoz its a bit complex
+Complete theory about filter chain -> https://docs.spring.io/spring-security/site/docs/3.0.x/reference/security-filter-chain.html
+
+
+By default spring generates a default password which will not be generated if you use your own config to do authentication and authorization which means you annotate with @EnableWebSecurity annotation, if you dont annotate this, your config is useless (your config means the class which is extending websecurityconfigureradapter)
+
+
+You can read about the terminologies here -> https://spring.io/guides/topicals/spring-security-architecture
+
+
+This article everyone should read -> https://www.baeldung.com/spring-boot-security-autoconfiguration (It tells you how you can add user and password in your application.properties also)
+
+
+
+
