@@ -4,7 +4,7 @@ public class MultiThreadedFactorial {
 
     public static void main(String[] args) throws InterruptedException {
 
-        int[]arr = {10000, 20000, 30000, 60000, 7700, 4000, 5000, 7000, 15000, 40000, 50000};
+        int[]arr = {10000, 20000, 30000, 60000, 7700, 4000, 5000, 7000, 150000, 400000, 50000, 70000, 4000000, 30000};
 
         long start = System.currentTimeMillis();
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec9951e2-0ba4-4ab3-a797-c4dcc49795b5" name="Default Changelist" comment="" />
+    <list default="true" id="ec9951e2-0ba4-4ab3-a797-c4dcc49795b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +16,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1eafjyLjTCIuT8T7x9oFVzdga2l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,8 +30,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.MultiThreadedFactorial">
+  <component name="RunManager" selected="Application.MT">
+    <configuration name="Assignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment" />
+      <module name="MT-JBDL5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BankOperations" />
+      <module name="MT-JBDL5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Factorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Factorial" />
       <module name="MT-JBDL5" />
@@ -38,13 +62,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MT_Runnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MT_Runnable" />
-      <module name="MT-JBDL5" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MultiThreadedFactorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MultiThreadedFactorial" />
       <module name="MT-JBDL5" />
@@ -54,10 +71,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MultiThreadedFactorial" />
-        <item itemvalue="Application.Factorial" />
         <item itemvalue="Application.MT" />
-        <item itemvalue="Application.MT_Runnable" />
+        <item itemvalue="Application.Assignment" />
+        <item itemvalue="Application.MultiThreadedFactorial" />
+        <item itemvalue="Application.BankOperations" />
+        <item itemvalue="Application.Factorial" />
       </list>
     </recent_temporary>
   </component>
@@ -87,26 +105,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="444" y="4" key="#com.intellij.ide.util.MemberChooser" timestamp="1594575323737">
+    <state x="444" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1595170955815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="444" y="4" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594575323737" />
-    <state width="1367" height="423" key="GridCell.Tab.0.bottom" timestamp="1594576990073">
+    <state x="444" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595170955815" />
+    <state x="413" y="65" key="FileChooserDialogImpl" timestamp="1595174779320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="423" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594576990073" />
-    <state width="1367" height="423" key="GridCell.Tab.0.center" timestamp="1594576990073">
+    <state x="413" y="65" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595174779320" />
+    <state width="1367" height="178" key="GridCell.Tab.0.bottom" timestamp="1595784376659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="423" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594576990073" />
-    <state width="1367" height="423" key="GridCell.Tab.0.left" timestamp="1594576990073">
+    <state width="1367" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595784376659" />
+    <state width="1367" height="178" key="GridCell.Tab.0.center" timestamp="1595784376659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="423" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594576990073" />
-    <state width="1367" height="423" key="GridCell.Tab.0.right" timestamp="1594576990073">
+    <state width="1367" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595784376659" />
+    <state width="1367" height="178" key="GridCell.Tab.0.left" timestamp="1595784376659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="423" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594576990073" />
+    <state width="1367" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595784376659" />
+    <state width="1367" height="178" key="GridCell.Tab.0.right" timestamp="1595784376659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595784376659" />
     <state x="337" y="42" width="675" height="655" key="StructurePopup" timestamp="1594575297584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

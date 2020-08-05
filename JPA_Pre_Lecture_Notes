@@ -1,0 +1,38 @@
+This is just to give all of you a sneak peek as to what will be covered in Sunday's class and what is jpa and hibernate all about
+
+So basically JPA (Java Persistence API) is an API or you can say a contract or specification and not a frameowrk which allows data management (management of data in your persistent database) through your java application. Now simplifying this statement, JPA is just a way to manager your DB data through your java application.
+
+Now why does we need JPA ?
+
+So think in this way, lets say you create a real time application which is used by lots of people, now when these people interact with your app, they must doing something which you want to store bcoz any application without persistent storage (databases) is nothing, so almost 99.99% applications need databases. Now that you have understood why databases are needed, it is easy to analyse that whenever a user request comes you have to do some DB operations, now in the real time, you won't be writing SQL queries for performing that DB operations, right.
+So your backend application (which is java in this case) has to handle all the DB operations that will be done in real time. That is why need JPA
+
+
+Now what is hibernate ?
+Hibernate is just and implementation of this JPA, which means JPA only specifies the operations that you can do with your DB objects but it does not do any oerations by itself. The actual implementation of the methods specified in jPA is done in hibernate whcih means let's take an example there is a function in JPA for saving object (basically insert)
+
+JPA  // Just the method declaration
+
+void save(Object obj);
+
+
+Hibernbate
+
+@Override
+void save(object obj){
+	
+	-----
+	Db.insert();
+	-----
+
+	// some operation is performed is here
+}
+
+
+I hope everyone is clear with the difference b/w the two
+Also it is not compulsory to use hibernate as the implementation,, there are other implementations available like open jpa, eclipse link but hibernate is the best one which most of people uses.
+
+In the live lecture, we will be running the example of JPA practically and i will show you how you can reduce the code writing part which we have done in jdbc
+
+
+You can read this article, it will be clear after these notes and article -> https://www.baeldung.com/jpa-hibernate-difference
